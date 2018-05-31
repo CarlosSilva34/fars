@@ -1,0 +1,43 @@
+---
+title: " FARS package to visualize US Fatality Analysis Recording System data"
+author: "Carlos Silva"
+date: "27 de Maio de 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Data
+
+The FARS package use data from the US National Highway Traffic Safety Administration's and performs operations on Fatality Analysis Reporting System, which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.
+
+### Functions
+
+This package provides the following Fatality Analysis Reporting System (FARS) functions:
+ 
+* **_fars_read()_** reads a file in table format, and returns it as an object of the "tbl_df" class, If the file does not exist in the current directory, this function stops execution with an error message. While reading all messages are suppressed.
+This function imports the functions *read_csv()* from the readr package, and *tbl_df()* from the dplyr package.
+
+* **_make_filename()_** generates the filename for a FARS datafile and takes a year as input and produces a valid FARS filename. Will return a filename with NA if the year parameter cannot be coerced to an integer. It is an internal function used by other functions in this package.
+
+* **_fars_read_years()_** takes as its only parameter a vector of years, reads the FARS files for those years and returns the Month and Year columns as a list. Invalid years will have  a NULL entry in the returned list.
+This function imports the functions *mutate()* and *select()* from the dplyr package and the operator "%>%" from magrittr package.
+
+* **_fars_summarize_years()_** can be used to get a data frame of FARS data for multiple years. Summarizes the number of fatal injuries suffered in motor vehicle traffic crashes by month with each year in its own column.
+If no valid years are found, the function will give an error. 
+This function imports the functions *bind_rows()*, *group_by()* and *summarize()* from the dplyr package, *spread()* from the tidyr package and the operator "%>%" from magrittr package. 
+
+* **_fars_map_state()_** draws the location of accidents in a US State for a given year and takes an integer that represents the state number and a vector of integer or strings that indicated the year of interest. 
+This function draws a map of the State and shows one point for each fatality that occurred in that State. Will throw an error if an invalid state number is chosen or the chosen year's data does not exist.
+This function imports the functions *filter()* from dplyr package, *map()* from maps package and *points()* from graphics package.
+
+### How to install the package
+
+The installation of the FARS package is done using its github repository and the *install_github()* function in the devtools package.
+
+```{r install, eval= FALSE}
+devtools::install_github("CarlosSilva34/BuildingRPackages", build_vignettes = TRUE)
+```
+
