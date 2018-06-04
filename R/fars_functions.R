@@ -21,8 +21,8 @@
 #'   \item \code{\link[dplyr]{tbl_df}} in the \code{dplyr} package.
 #' }
 #'
-#' @importFrom readr
-#' @importFrom dplyr
+#' @importFrom readr read_csv
+#' @importFrom dplyr tbl_df
 #'
 #' @examples
 #' \dontrun{
@@ -76,8 +76,8 @@ make_filename <- function(year) {
 #'   \item \code{\link[dplyr]{mutate}} and \code{\link[dplyr]{select}} in the \code{dplyr} package.
 #' }
 #'
-#' @importFrom magrittr "%>%"
-#' @importFrom dplyr
+#' @importFrom magrittr %>%
+#' @importFrom dplyr mutate select
 #'
 #' @examples
 #' \dontrun{
@@ -118,9 +118,9 @@ fars_read_years <- function(years) {
 #'   \item \code{\link[tidyr]{spread}} in the \code{tidyr} package.
 #' }
 #'
-#' @importFrom dplyr
-#' @importFrom magrittr "%>%"
-#' @importFrom tidyr
+#' @importFrom dplyr bind_rows group_by summarize
+#' @importFrom magrittr %>%
+#' @importFrom tidyr spread
 #'
 #' @examples
 #' \dontrun{
@@ -156,9 +156,9 @@ fars_summarize_years <- function(years) {
 #'   \item \code{\link[graphics]{points}} in the \code{graphics} package.
 #' }
 #'
-#' @importFrom dplyr
-#' @importFrom maps
-#' @importFrom graphics
+#' @importFrom dplyr filter
+#' @importFrom maps map
+#' @importFrom graphics points
 #'
 #' @examples
 #' \dontrun{
