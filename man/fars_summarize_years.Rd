@@ -6,6 +6,9 @@
 \usage{
 fars_summarize_years(years)
 }
+\arguments{
+\item{years}{a vector of integer or strings that indicated the year of interest.}
+}
 \value{
 A dataframe with the number of fatal injuries suffered in motor vehicle traffic
   crashes by month with each year in its own column. If no valid years are found, the function

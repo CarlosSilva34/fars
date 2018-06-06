@@ -3,6 +3,7 @@ Type: Package
 Title: FARS package to visualize US Fatality Analysis Recording System data
 Version: 0.1.0
 Author: Carlos Silva
+Maintainer: Carlos Araújo Silva <carlosaraujo34@gmail.com>
 Description: Load the FARS data files and provide simple summary and visualization functions.
 License: GPL-3
 Encoding: UTF-8

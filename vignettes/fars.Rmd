@@ -1,8 +1,12 @@
 ---
 title: " FARS package to visualize US Fatality Analysis Recording System data"
 author: "Carlos Silva"
-date: "27 de Maio de 2018"
-output: html_document
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
