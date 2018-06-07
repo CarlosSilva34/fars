@@ -10,7 +10,7 @@ vignette: >
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, results='hide')
 ```
 
 ### Data
@@ -42,6 +42,6 @@ This function imports the functions *filter()* from dplyr package, *map()* from 
 The installation of the FARS package is done using its github repository and the *install_github()* function in the devtools package.
 
 ```{r install, eval= FALSE}
-devtools::install_github("CarlosSilva34/BuildingRPackages", build_vignettes = TRUE)
+devtools::install_github("CarlosSilva34/fars", build_vignettes = TRUE)
 ```
 
